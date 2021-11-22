@@ -1,0 +1,74 @@
+.animal-container {
+    width: 100%;
+    font-family: Open Sans;
+    align-items: stretch;
+    justify-content: left;
+    display: flex;
+    flex-direction: inline-flex;
+    margin-top: 36px;
+    margin-bottom: 86px;
+}
+
+img {
+    width: 552px;
+    height: 321px;
+    object-fit: over;
+    margin-left: 130px;
+}
+
+.animal-detail {
+    width: 527px;
+    margin-left: 77px;
+    display: flex;
+    flex-direction: column;
+}
+
+.animal-name,
+.no-result {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 49px;
+    color: #3B3B3B;
+}
+
+.no-result {
+    text-align: center;
+    margin: 100px;
+}
+
+.animal-description {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 22px;
+    color: #737373;
+}
+
+.title {
+    margin-top: 16px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 23px;
+    color: #3B3B3B;
+}
+
+.animal-shelter {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #737373;
+    margin-top: 8px;
+}
+
+.animal-status {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    color: #6023C5;
+    margin-top: 8px;
+}

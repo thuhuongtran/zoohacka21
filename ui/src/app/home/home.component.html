@@ -1,0 +1,37 @@
+<div class="home-banner">
+  <label class="search-form">
+    <div class="search-input-box">
+      <img class="search-input-icon" src="../../assets/search-solid.svg">
+      <input class="input-txt" [value]="keyword" placeholder="Search for a wildlife" (change)="searchChanged($event)">
+      <div class="upload-wrapper">
+        <img class="search-camera-input-icon" src="../../assets/camera-solid.svg">
+        <input type="file" name="file" (change)="handleFileInput($event)"/>
+      </div>
+
+    </div>
+    <button class="search-button" (click)="searchAnimal()">
+      <span>Search</span>
+    </button>
+  </label>
+</div>
+<div class="home-centers">
+  <p class="title-centers">Rescue & Care centres</p>
+  <div class="center-block">
+    <div class="center-box" *ngFor="let center of centers">
+      <a href="{{center.org_url}}" target="_blank">
+        <img class="center-img" src="{{center.image_link}}">
+      </a>
+      <div class="center-name">{{center.name}}</div>
+      <div class="center-desc">{{center.description}}</div>
+      <div class="center-info-block">
+        <img class="center-info-icon info-phone-icon" src="../../assets/phone-square-solid.svg">
+        <label class="info-txt info-phone-txt">{{center.phone}}</label>
+      </div>
+      <div class="center-info-block">
+        <img class="center-info-icon info-location-icon" src="../../assets/compass-solid.svg">
+        <label class="info-txt info-location-txt">{{center.location}}</label>
+      </div>
+    </div>
+  </div>
+  <a class="end-centers" href="/rescue-centers">View more</a>
+</div>

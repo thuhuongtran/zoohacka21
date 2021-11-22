@@ -1,0 +1,26 @@
+.aboutus {
+    padding-left: 130px;
+}
+
+.aboutus-title {
+    color: #6023C5;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.aboutus-wrapper {
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.aboutus-content {
+    font-size: 22px;
+    max-width: 500px;
+    line-height: 30px;
+}
+
+.top-logo {
+    width: 100%;
+}

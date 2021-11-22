@@ -1,0 +1,14 @@
+<div class="animal-container" ngClass="" *ngIf="wildAnimal!==undefined && wildAnimal.name!=null">
+    <img src="{{wildAnimal.img_link}}">
+    <div class="animal-detail">
+        <div class="animal-name">{{wildAnimal.name}}</div>
+        <div class="animal-description">{{wildAnimal.description}}</div>
+        <div class="title">Animal shelter</div>
+        <div class="animal-shelter">{{wildAnimal.rescue_center_info}}</div>
+        <div class="title">Conversation status</div>
+        <div class="animal-status">{{wildAnimal.alert_level}}</div>
+    </div>
+</div>
+<div class="no-result" *ngIf="wildAnimal!==undefined && wildAnimal.name==null">
+    No animal found
+</div>

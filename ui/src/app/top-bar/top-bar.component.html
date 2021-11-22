@@ -1,0 +1,30 @@
+<div class="top-bar">
+  <a class="top-bar-link" href="/">
+
+    <img class="top-logo" src="../assets/images/zoowind-logo.jpg" alt="LOGO"></a>
+    <div class="top-bar-direction">
+        <a class="top-bar-link" href="/">
+            <span [ngClass]="routeIsActive('/') ? 'active-link' : 'unactive-link'" class="top-bar-txt">HOME</span>
+        </a>
+        <a class="top-bar-link" href="/rescue-centers">
+            <span [ngClass]="routeIsActive('rescue-centers') ? 'active-link' : 'unactive-link'" class="top-bar-txt">RESCUE CENTERS</span>
+        </a>
+        <a routerLink="/activism" class="top-bar-link" href="/activism">
+            <span [ngClass]="routeIsActive('activism') ? 'active-link' : 'unactive-link'" class="top-bar-txt">ACTIVISM</span>
+        </a>
+        <a routerLink="/about-us" class="top-bar-link" href="/about-us">
+            <span [ngClass]="routeIsActive('about-us') ? 'active-link' : 'unactive-link'" class="top-bar-txt">ABOUT US</span>
+        </a>
+        <a routerLink="/contact" class="top-bar-link" href="/contact">
+            <span [ngClass]="routeIsActive('contact') ? 'active-link' : 'unactive-link'" class="top-bar-txt">CONTACT</span>
+        </a>
+    </div>
+    <div class="top-icon">
+        <a href="http://facebook.com/">
+            <img class="top-icon-item" src="../assets/facebook-brands.svg">
+        </a>
+        <a href="https://www.youtube.com/">
+            <img class=" top-icon-item " src="../assets/youtube-brands.svg ">
+        </a>
+    </div>
+</div>

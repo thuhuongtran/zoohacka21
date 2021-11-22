@@ -1,0 +1,20 @@
+<div class="rescue-centers">
+  <p class="title-centers">Rescue & Care centres Vietnam</p>
+  <div class="center-block">
+    <div class="center-box" *ngFor="let center of centers">
+      <a href="{{center.org_url}}" target="_blank">
+        <img class="center-img" src="{{center.image_link}}">
+      </a>
+      <div class="center-name">{{center.name}}</div>
+      <div class="center-desc">{{center.description}}</div>
+      <div class="center-info-block">
+        <img class="center-info-icon info-phone-icon" src="../../assets/phone-square-solid.svg">
+        <label class="info-txt info-phone-txt">{{center.phone}}</label>
+      </div>
+      <div class="center-info-block">
+        <img class="center-info-icon info-location-icon" src="../../assets/compass-solid.svg">
+        <label class="info-txt info-location-txt">{{center.location}}</label>
+      </div>
+    </div>
+  </div>
+</div>

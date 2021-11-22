@@ -16,9 +16,6 @@ import static org.springframework.http.HttpStatus.OK;
 public class ReportController {
     @Autowired
     private ReportDao dao;
-    @Autowired
-    private CsvReader csvReader;
-
     @GetMapping("list")
     public List<Report> getAllReport() {
         return dao.findAll();
@@ -26,8 +23,8 @@ public class ReportController {
 
     @PostMapping("/save-all")
     public String saveAllFromCsvFile(@RequestParam("file") MultipartFile file) {
-        List<Report> reports = csvReader.loadObjectList(Report.class, file);
-        dao.saveAll(reports);
+//        List<Report> reports = csvReader.loadObjectList(Report.class, file);
+//        dao.saveAll(reports);
         return OK.toString();
     }
 }

@@ -1,0 +1,79 @@
+.activism-title {
+  color: #6023c5;
+  font-size: 36px;
+  font-weight: 600;
+  margin-left: 30px;
+}
+
+.activism {
+  padding: 24px 48px;
+}
+
+.news-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.news {
+    padding: 20px;
+    max-width: 400px;
+}
+
+.news p {
+  color: #737373;
+}
+.news-interaction {
+    color: #6023c5;
+    display: flex;
+}
+
+.news-date, .news-date > img, .news-author > img {
+    margin-right: 10px;
+}
+
+
+.news-date, .news-author {
+    align-items: center;
+    display: flex;
+}
+
+.news-title {
+    color: #3B3B3B;
+    font-size: 18px;
+}
+
+.news a {
+    text-decoration: none;
+    color:#3B3B3B;
+}
+
+.see-more {
+  text-align: center;
+  margin-top: 30px;
+  cursor: pointer;
+  color: #BB92FF;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 50px;
+}
+
+.see-more:hover {
+  color: #6023C5
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  margin: 10px 0px;
+  background: gainsboro;
+  width: fit-content;
+  padding: 6px;
+  border-radius: 10px;
+  color: gray;
+}
+
+.tag > img {
+  margin-right: 4px;
+}

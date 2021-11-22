@@ -1,0 +1,26 @@
+.footer-bg {
+    background-color: #7B43D7;
+    padding: 24px 48px;
+    color: white;
+}
+
+.footer-item {
+    margin: 0px 50px;
+    max-width: 350px;
+}
+
+.footer-item a {
+    text-decoration: none;
+    color: white;
+    line-height: 30px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.top-logo {
+height:100px;
+width:auto;
+}

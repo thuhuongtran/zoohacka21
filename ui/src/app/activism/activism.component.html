@@ -1,0 +1,26 @@
+<section class="activism">
+  <p class="activism-title">Activism</p>
+  <div class="news-list">
+    <div class="news"  *ngFor="let act of activism">
+        <a href="{{act.link}}">
+            <img style="width: 100%;" src="{{act.image}}" />
+            <h4 class="news-title">{{act.title}}</h4>
+        </a>
+      <p>
+        {{act.subtitle}}
+      </p>
+      <div class="news-interaction">
+        <div class="news-date">
+          <img src="../../assets/images/Vector.png" /><span>{{act.date}}</span>
+        </div>
+        <div class="news-author">
+          <img src="../../assets/images/author.png" /> <span> {{act.author}}</span>
+        </div>
+      </div>
+      <div class="tag">
+        <img src="../../assets/images/price-tag (1).png"/>
+        <span>{{act.category}}</span>
+      </div>
+    </div>
+  </div>
+</section>

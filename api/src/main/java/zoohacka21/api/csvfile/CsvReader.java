@@ -1,34 +1,46 @@
 package zoohacka21.api.csvfile;
 
-import com.fasterxml.jackson.databind.MappingIterator;
-import com.fasterxml.jackson.dataformat.csv.CsvMapper;
-import com.fasterxml.jackson.dataformat.csv.CsvSchema;
+import com.opencsv.CSVReader;
+import com.opencsv.exceptions.CsvException;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
-import java.util.Collections;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
+import java.util.stream.Collectors;
 
 @Component
 public class CsvReader {
-    public <T> List<T> loadObjectList(Class<T> type, MultipartFile multipartFile) {
+
+    public List<List<String>> readCsv(MultipartFile file) {
         try {
-            CsvSchema bootstrapSchema = CsvSchema.emptySchema().withHeader();
-            CsvMapper mapper = new CsvMapper();
-            File file = toFile(multipartFile);
-            MappingIterator<T> readValues =
-                    mapper.reader(type).with(bootstrapSchema).readValues(file);
-            return readValues.readAll();
+            return separateToStringItems(file);
         } catch (Exception e) {
-            return Collections.emptyList();
+            e.printStackTrace();
         }
+        return new ArrayList<>();
+    }
+
+    private List<List<String>> separateToStringItems(MultipartFile file) throws IOException, CsvException {
+        List<List<String>> records;
+        try (CSVReader reader = new CSVReader(new FileReader(toFile(file)))) {
+            List<String[]> lines = reader.readAll();
+            records = lines.stream().map(Arrays::asList).collect(Collectors.toList());
+        }
+        return records;
     }
 
     private File toFile(MultipartFile multipartFile) throws IOException {
-        File file = new File("src/main/resources/temp.csv");
-        multipartFile.transferTo(file);
+        File file = new File(Objects.requireNonNull(multipartFile.getOriginalFilename()));
+        FileOutputStream fos = new FileOutputStream(file);
+        fos.write(multipartFile.getBytes());
+        fos.close();
         return file;
     }
 }

@@ -16,8 +16,6 @@ import static org.springframework.http.HttpStatus.OK;
 public class ActivismController {
     @Autowired
     private ActivismDao dao;
-    @Autowired
-    private CsvReader csvReader;
 
     @GetMapping("list")
     public List<Activism> getAllActivism() {
@@ -26,8 +24,8 @@ public class ActivismController {
 
     @PostMapping("/save-all")
     public String saveAllFromCsvFile(@RequestParam("file") MultipartFile file) {
-        List<Activism> activisms = csvReader.loadObjectList(Activism.class, file);
-        dao.saveAll(activisms);
+//        List<Activism> activisms = csvReader.loadObjectList(Activism.class, file);
+//        dao.saveAll(activisms);
         return OK.toString();
     }
 }

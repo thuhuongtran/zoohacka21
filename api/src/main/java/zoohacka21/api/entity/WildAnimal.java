@@ -16,10 +16,10 @@ public class WildAnimal {
     private String id;
     private String name;
     private String description;
-    @JsonProperty("rescue_center_id")
-    private String rescueCenterId;
+    @JsonProperty("rescue_center_info")
+    private String rescueCenterName;
     @JsonProperty("alert_level")
-    private Integer alertLevel;
+    private String alertLevel;
     @JsonProperty("img_link")
     private String imageLink;
 }
